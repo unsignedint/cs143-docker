@@ -1,0 +1,25 @@
+Docker build for the CS143 Compilers course
+-------------------------------------------
+
+https://courses.edx.org/courses/course-v1:StanfordOnline+SOE.YCSCS1+1T2020/
+
+- Based on Ubuntu 16.04
+- JDK 8
+- GCC 5.4
+
+
+Usage
+-----
+
+Build and prepare workspace
+
+    ./build.sh
+
+This will set up a local `assignments` directory. Which is volume-mounted in the run script.
+
+    ./run.sh
+
+You are now ready to test, e.g.:
+
+    $ cd PA2J
+    $ make lexer ...
