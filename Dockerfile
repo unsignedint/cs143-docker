@@ -3,7 +3,7 @@ FROM ubuntu:xenial
 COPY .student-dist /usr/class/cs143
 
 RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y libc6-i386 flex bison build-essential curl \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y libc6-i386 flex bison build-essential curl csh \
     && rm -rf /var/lib/apt/lists/* \
     && sed -i -e 's/ln -s/cp -r -L/g' /usr/class/cs143/assignments/*/Makefile \
     && ln -s /usr/class/cs143 /root/cs143
